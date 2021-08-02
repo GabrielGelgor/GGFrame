@@ -1,9 +1,5 @@
-import { User } from './models/User';
+import { UserForm } from "./views/UserForm";
 
-const user = new User({ name: 'GabeG', age: 23  });
+const userForm = new UserForm(document.getElementById('root'));
 
-user.events.on('change', () => {
-    console.log('CHANGE');
-});
-
-user.events.trigger('change');
+userForm.render();
